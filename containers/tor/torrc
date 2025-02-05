@@ -1,0 +1,6 @@
+RunAsDaemon 0
+
+HiddenServiceDir /var/lib/tor/nginx
+# Should probably be https
+HiddenServicePort 80 nginx:80
+
