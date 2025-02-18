@@ -52,7 +52,7 @@ summary {
     cursor: pointer;
     background-color: #2a2a2a;
     font-weight: 600;
-    color: #da0808;
+    color: #fa0808;
     list-style: none;
     display: flex;
     flex-direction: column;
@@ -64,7 +64,7 @@ summary {
 summary .step-title b {
     font-weight: 800;
     color: #ffffff;
-    background-color: #c80808;
+    background-color: #880808;
     padding: 0 0.2rem 0 0.2rem;
 }
 summary .step-title a {
@@ -104,7 +104,7 @@ summary::-webkit-details-marker {
 
 .toggle-text {
     font-size: 1.0rem;
-    color: #da0808;
+    color: #fafafa;
     padding-top: 0.0rem;
     border-top: 1px solid #333;
     width: 100%;
