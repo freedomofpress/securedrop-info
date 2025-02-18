@@ -1,0 +1,137 @@
+/* styles.css */
+
+@font-face {
+  font-family: 'Modern Gothic';
+  font-weight: 500;
+  font-display: swap;
+  src: url("../fonts/moderngothic.woff2") format('woff2');
+}
+
+@font-face {
+  font-family: 'Modern Gothic Mono';
+  font-weight: 500;
+  font-display: swap;
+  src: url("../fonts/moderngothicmono.woff2") format('woff2');
+}
+
+body {
+    font-family: "Modern Gothic", sans-serif;
+    line-height: 1.6;
+    color: #ffffff;
+    background-color: #1c1c1c;
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+#header-container {
+    display: flex;
+}
+
+#header-logo {
+    order: 2;
+}
+
+#header-title {
+    order: 0;
+}
+
+details {
+    margin-bottom: 1rem;
+    border: 1px solid #333;
+    border-radius: 4px;
+    background-color: #242424;
+}
+
+details p {
+   margin: 0 1rem 1rem 1rem;
+}
+
+summary {
+    padding: 0.8rem 0.8rem 0.2rem 0.8rem;
+    cursor: pointer;
+    background-color: #2a2a2a;
+    font-weight: 600;
+    color: #da0808;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 0.5rem;
+    font-size: 1.2rem;
+}
+
+summary .step-title b {
+    font-weight: 800;
+    color: #ffffff;
+    background-color: #c80808;
+    padding: 0 0.2rem 0 0.2rem;
+}
+summary .step-title a {
+    font-weight: 800;
+    color: #ffffff;
+    background-color: #0808c8;
+    padding: 0 0.2rem 0 0.2rem;
+}
+
+summary .step-title kbd {
+    font-weight: 800;
+    color: #ffffff;
+    background-color: #000000;
+    padding: 0 0.2rem 0 0.2rem;
+}
+
+img.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+p.footer-fpf {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+    text-align: center;
+    border-top: 1px solid var(--footer-border);
+    color: var(--footer-fpf-color)
+}
+
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+.toggle-text {
+    font-size: 1.0rem;
+    color: #da0808;
+    padding-top: 0.0rem;
+    border-top: 1px solid #333;
+    width: 100%;
+    text-align: right;
+}
+
+details[open] .toggle-text::before {
+    content: "less - ";
+}
+
+details:not([open]) .toggle-text::before {
+    content: "more +";
+}
+
+summary:hover {
+    background-color: #303030;
+}
+
+.content {
+    padding: 1rem;
+}
+
+details:focus {
+    outline: 3px solid #1c7dff;
+    outline-offset: 2px;
+}
+
+@media print {
+    details, details > * { display:block !important; }
+}
