@@ -1,21 +1,7 @@
 /* styles.css */
 
-@font-face {
-  font-family: 'Modern Gothic';
-  font-weight: 500;
-  font-display: swap;
-  src: url("../fonts/moderngothic.woff2") format('woff2');
-}
-
-@font-face {
-  font-family: 'Modern Gothic Mono';
-  font-weight: 500;
-  font-display: swap;
-  src: url("../fonts/moderngothicmono.woff2") format('woff2');
-}
-
 body {
-    font-family: "Modern Gothic", sans-serif;
+    font-family: Arimo, Arial, sans-serif;
     line-height: 1.6;
     color: #ffffff;
     background-color: #1c1c1c;
