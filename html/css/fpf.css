@@ -33,7 +33,7 @@
     font-size: 1.4rem;
 
     .inner {
-        width: var(--max-width);
+        max-width: var(--max-width);
         margin: 0 auto;
     }
 
@@ -99,12 +99,23 @@ a:hover {
 }
 
 .intro > p {
-    width: var(--column-width);
+    max-width: var(--column-width);
 }
 
 .first {
     font-size: var(--font-size-md);
     color: #000;
+}
+
+@media (max-width: 720px) {
+    .header-title {
+        font-size: var(--font-size-md);
+        font-weight: bold;
+    }
+
+    .first {
+        font-size: var(--font-size-base);
+    }
 }
 
 .highlight {
@@ -115,7 +126,7 @@ a:hover {
 }
 
 details {
-    width: var(--column-width);
+    max-width: var(--column-width);
     padding: 0;
     padding-bottom: calc(2 * var(--line-height-px));
     border-top: 1px solid #EEE;
