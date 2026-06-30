@@ -3,7 +3,9 @@
 This repository contains simplified instructions for sources on how to use SecureDrop
 safely and securely.
 
-It is accessible only via a Tor hidden service: <https://howto.securedrop.tor.onion/>.
+It is accessible only via a Tor hidden service: <https://howto.securedrop.tor.onion/> so it
+should be tested in Tor Browser. Additionally it needs to support being printed out, so URLs
+should be included in the text and not merely hyperlinked.
 
 ### Test environment
 
