@@ -17,7 +17,7 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 
-FROM debian:latest
+FROM debian:trixie
 
 ENV APP="tor"
 ENV APP_BASE="/etc"
@@ -28,22 +28,13 @@ WORKDIR ${APP_BASE}/${APP}
 # Install basic dependencies
 RUN apt-get update && \
     apt-get upgrade -y && \
-    apt-get install -y \
-    apt-transport-https \
-    ca-certificates \
-    wget gnupg
+    apt-get install -y extrepo
 
-COPY configs/apt/tor.list /etc/apt/sources.list.d/tor.list
-COPY scripts/get-tor-debian-key.sh /usr/local/bin
-RUN  /usr/local/bin/get-tor-debian-key.sh /usr/share/keyrings/tor-archive-keyring.gpg
-RUN  rm /usr/local/bin/get-tor-debian-key.sh
+RUN extrepo enable torproject
 
 # Install Tor and dependencies
 RUN apt-get update && \
-    apt-get install -y \
-    deb.torproject.org-keyring \
-    tor \
-    && rm -rf /var/lib/apt/lists/*
+    apt-get install -y tor
 
 COPY containers/tor/torrc ${APP_BASE}/${APP}/torrc
 
@@ -56,4 +47,3 @@ USER debian-tor
 ENTRYPOINT [ "/usr/bin/tor", "-f", "/etc/tor/torrc" ]
 
 EXPOSE 9050 9051
-
